@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday B*tch!</title>
+
+  <!-- Fraunces font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --red: #d00000;
+      --gold-light: #f4d35e;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #d00000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 18px;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      background: white;
+      border-radius: 25px;
+      padding: 32px 24px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .emoji {
+      font-size: 62px;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin: 8px 0;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 10px 0 20px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 13px 0;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 16px;
+      border: none;
+      border-radius: 14px;
+      background: #222;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* 34 STYLE */
+
+    .age {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-size: 110px;
+      font-weight: 900;
+      color: var(--red);
+      line-height: 1;
+      text-shadow: 4px 4px 0 var(--gold-light);
+    }
+
+    .age-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 12px 0 18px;
+    }
+
+    /* Flower order */
+
+    .order {
+      background: #f5f5f5;
+      border-radius: 15px;
+      padding: 18px;
+      margin: 20px 0;
+      text-align: left;
+    }
+
+    .order p {
+      margin: 8px 0;
+    }
+
+    .status {
+      color: #249447;
+      font-weight: bold;
+    }
+
+    /* Mountains */
+
+    .mountains {
+      font-size: 58px;
+      margin-bottom: 10px;
+    }
+
+    .big-text {
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    /* Cancelled */
+
+    .cancelled {
+      color: #d62828;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    /* Coffee */
+
+    .coffee {
+      font-size: 70px;
+    }
+
+    /* Footer */
+
+    .footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #999;
+    }
+
+    /* Confetti */
+
+    .confetti {
+      position: fixed;
+      top: -40px;
+      font-size: 25px;
+      pointer-events: none;
+      z-index: 100;
+      animation: fall 4s linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <!-- PAGE 1 -->
+
+    <div id="page1">
+
+      <div class="emoji">🎂</div>
+
+      <h1>HAPPY</h1>
+
+      <div class="age-wrap">
+        <div class="age">34</div>
+      </div>
+
+      <p>
+        <strong>BESNIK!</strong>
+      </p>
+
+      <p>
+        I had a little surprise planned for you...
+      </p>
+
+      <button onclick="showPage(2)">
+        SEE... 👀
+      </button>
+
+    </div>
+
+
+    <!-- PAGE 2 -->
+
+    <div id="page2" class="hidden">
+
+      <div class="emoji">🌷</div>
+
+
+      <p>
+        I ordered something.
+      </p>
+
+      <div class="order">
+
+        <p>🌷 <strong>Order:</strong> Flowers</p>
+
+        <p>📍 <strong>Delivery:</strong> Your flat</p>
+
+        <p>📅 <strong>Delivery:</strong> TODAY</p>
+
+      </div>
+
+      <p>
+        Everything was going perfectly...
+      </p>
+
+      <button onclick="showPage(3)">
+        Besnik sent a VIDEO 😐
+      </button>
+
+    </div>
+
+
+    <!-- PAGE 3 -->
+
+    <div id="page3" class="hidden">
+
+      <div class="mountains">
+        📹:🐄🏔️
+      </div>
+
+ 
+      <p style="font-size: 38px;">
+      I was like...
+      </p>
+
+      <p style="font-size: 38px;">
+        🤨
+      </p>
+
+      <p>
+        <strong>
+          WAIT a damn minute...
+        </strong>
+      </p>
+ <p>
+        🥾 Hiking<br>
+        🏔️ Mountains<br>
+        🐄 Cows<br>
+      </p>
+      <p class="big-text">
+        YOU'RE IN SWITZERLAND?!
+      </p>
+
+     
+
+      <button onclick="showPage(4)">
+        SO... WHAT NOW? 🤔
+      </button>
+
+    </div>
+
+
+    <!-- PAGE 4 -->
+
+    <div id="page4" class="hidden">
+
+      <div class="emoji"> 🖕🏻 </div>
+
+  
+      <p>
+        Sending flowers to an empty flat
+        seemed slightly pointless.
+      </p>
+
+      <p>
+        So...
+      </p>
+
+      <p class="big-text">
+        I CANCELLED THEM. 😂
+      </p>
+
+      <button onclick="showPage(5)">
+        BUT WAIT... ☕
+      </button>
+
+    </div>
+
+
+    <!-- PAGE 5 -->
+
+    <div id="page5" class="hidden">
+
+      <div class="coffee">
+        ☕
+      </div>
+
+      <h2>YOU STILL HAVE A PRESENT</h2>
+
+      <p>
+        Your espresso cups are waiting for you.
+      </p>
+
+      <p>
+        But this time...
+      </p>
+
+      <p class="big-text">
+        In Kosovo.
+      </p>
+
+
+      <button onclick="showPage(6)">
+        OKAY... HAPPY BIRTHDAY!❤️
+      </button>
+
+    </div>
+
+
+    <!-- PAGE 6 -->
+
+    <div id="page6" class="hidden">
+
+      <div class="emoji">
+        🎉🎂🥳
+      </div>
+
+
+      <p>
+        I hope you have an amazing birthday
+        and an even better year ahead.
+      </p>
+
+      <p>
+        Enjoy the mountains, don't get lost,
+        and say hi to the mooooos for me. 🐄
+      </p>
+
+      <p>
+        <strong>
+          Love you ❤️
+        </strong>
+      </p>
+
+
+      <button onclick="celebrate()">
+        ONE LAST THING 🎁
+      </button>
+
+      <div class="footer">
+        Kaltrina © 2026
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function showPage(number) {
+
+      for (let i = 1; i <= 6; i++) {
+        document
+          .getElementById("page" + i)
+          .classList.add("hidden");
+      }
+
+      document
+        .getElementById("page" + number)
+        .classList.remove("hidden");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+
+    function celebrate() {
+
+      const emojis = [
+        "🎉",
+        "🎂",
+        "🥳",
+        "🎈",
+        "❤️",
+        "☕",
+        "🐄",
+        "🖕🏻","🖕🏻","🖕🏻",
+        "🌷"
+      ];
+
+      for (let i = 0; i < 80; i++) {
+
+        const confetti = document.createElement("div");
+
+        confetti.className = "confetti";
+
+        confetti.innerText =
+          emojis[Math.floor(Math.random() * emojis.length)];
+
+        confetti.style.left =
+          Math.random() * 100 + "vw";
+
+        confetti.style.animationDuration =
+          (2 + Math.random() * 3) + "s";
+
+        confetti.style.animationDelay =
+          Math.random() * 1.5 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+          confetti.remove();
+        }, 6000);
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
